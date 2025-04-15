@@ -22,18 +22,57 @@
         </a>
         <h3 class="form-title">Регистрация на<br />практикум</h3>
         <p class="form-text">Заполните форму, чтобы продолжить</p>
-        <form action="http://localhost:3000/send" method="POST" class="form-form">
-          <input type="text" value="./success-ru.html" name="page" style="visibility: hidden;" />
-          <input type="text" placeholder="Ваше имя" name="name" class="form-input-text" />
-          <input type="text" placeholder="Ваша электронная почта" name="email" class="form-input-text" />
-          <input type="tel" placeholder="Ваш номер телефону" name="tel" class="form-input-text" />
+        <form
+          action="http://localhost:3000/send"
+          method="POST"
+          class="form-form"
+        >
+          <input
+            type="text"
+            value="./success-ru.html"
+            name="page"
+            style="visibility: hidden"
+          />
+          <input
+            type="text"
+            placeholder="Ваше имя"
+            name="name"
+            class="form-input-text"
+          />
+          <input
+            type="text"
+            placeholder="Ваша электронная почта"
+            name="email"
+            class="form-input-text"
+          />
+          <input
+            type="tel"
+            placeholder="Ваш номер телефону"
+            name="tel"
+            class="form-input-text"
+          />
           <div class="form-check-block">
             <input type="checkbox" checked name="offerta" class="checkmark" />
-            <p class="form-inpt-check-text">Соглашаюсь с условиями <a href="https://docs.google.com/document/d/1RxuO1RrNYAE6SPOPV8EDoBQ1Tvc9_Ah5_d8Ah01_gdo/edit?tab=t.0" target="_blank">политики обработки персональных данных</a> и <a href="https://docs.google.com/document/d/1OIuxYrzzregtJsbs4NG4uAGx0BHnk6c0UKxAIMt010U/edit?tab=t.0" target="_blank">договором-офертой</a></p>
+            <p class="form-inpt-check-text">
+              Соглашаюсь с условиями
+              <a
+                href="https://docs.google.com/document/d/1RxuO1RrNYAE6SPOPV8EDoBQ1Tvc9_Ah5_d8Ah01_gdo/edit?tab=t.0"
+                target="_blank"
+                >политики обработки персональных данных</a
+              >
+              и
+              <a
+                href="https://docs.google.com/document/d/1OIuxYrzzregtJsbs4NG4uAGx0BHnk6c0UKxAIMt010U/edit?tab=t.0"
+                target="_blank"
+                >договором-офертой</a
+              >
+            </p>
           </div>
           <div class="form-check-block">
             <input type="checkbox" checked name="subscribe" class="checkmark" />
-            <p class="form-inpt-check-text">Соглашаюсь на получение рекламных рассылок</p>
+            <p class="form-inpt-check-text">
+              Соглашаюсь на получение рекламных рассылок
+            </p>
           </div>
           <button type="submit" class="form-btn">Отправить</button>
         </form>
@@ -135,7 +174,9 @@
         </ul>
         <div class="main-reg">
           <a href="#form"
-            ><button class="main-reg-btn" onclick="window.sppopups.open()">ЗАРЕГИСТРИРОВАТЬСЯ</button></a
+            ><button class="main-reg-btn" onclick="window.sppopups.open()">
+              ЗАРЕГИСТРИРОВАТЬСЯ
+            </button></a
           >
           <div class="main-reg-desc">
             <b class="main-reg-title"
@@ -262,7 +303,9 @@
         </li>
       </ul>
       <a href="#form"
-        ><button class="for-btn main-reg-btn" onclick="window.sppopups.open()">Занять место</button></a
+        ><button class="for-btn main-reg-btn" onclick="window.sppopups.open()">
+          Занять место
+        </button></a
       >
 
       <img src="imgs/light.webp" class="for-light" />
@@ -410,7 +453,21 @@
         }
       </script>
     </section>
-    
-    <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="cc7d62e8-741e-4849-a1f8-56466fc83618"></script>
+
+    <script type="text/javascript">
+      spPopupsScript = document.createElement("script");
+      spPopupsScript.src = "https://static.sppopups.com/assets/loader.js";
+      spPopupsScript.async = true;
+      spPopupsScript.setAttribute(
+        "data-chats-widget-id",
+        "7f75380b-1964-4d0d-bea2-d94a2a0a785d"
+      );
+      document.head.appendChild(spPopupsScript);
+    </script>
+    <script
+      async
+      src="https://static.sppopups.com/assets/loader.js"
+      data-chats-widget-id="7f75380b-1964-4d0d-bea2-d94a2a0a785d"
+    ></script>
   </body>
 </html>
