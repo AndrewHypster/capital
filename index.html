@@ -455,10 +455,134 @@
     </section>
     <script src="timer.js"></script>
 
-    <script
-      async
-      src="https://static.sppopups.com/assets/loader.js"
-      data-chats-widget-id="77e01264-91de-4fad-bd9a-8e5ce9180a72"
-    ></script>
+    <script>
+      function _typeof(t) {
+        return (_typeof =
+          "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+            ? function (t) {
+                return typeof t;
+              }
+            : function (t) {
+                return t &&
+                  "function" == typeof Symbol &&
+                  t.constructor === Symbol &&
+                  t !== Symbol.prototype
+                  ? "symbol"
+                  : typeof t;
+              })(t);
+      }
+      function ownKeys(e, t) {
+        var o,
+          r = Object.keys(e);
+        return (
+          Object.getOwnPropertySymbols &&
+            ((o = Object.getOwnPropertySymbols(e)),
+            t &&
+              (o = o.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+              })),
+            r.push.apply(r, o)),
+          r
+        );
+      }
+      function _objectSpread(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var o = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? ownKeys(Object(o), !0).forEach(function (t) {
+                _defineProperty(e, t, o[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(o))
+            : ownKeys(Object(o)).forEach(function (t) {
+                Object.defineProperty(
+                  e,
+                  t,
+                  Object.getOwnPropertyDescriptor(o, t)
+                );
+              });
+        }
+        return e;
+      }
+      function _defineProperty(t, e, o) {
+        return (
+          (e = _toPropertyKey(e)) in t
+            ? Object.defineProperty(t, e, {
+                value: o,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (t[e] = o),
+          t
+        );
+      }
+      function _toPropertyKey(t) {
+        t = _toPrimitive(t, "string");
+        return "symbol" === _typeof(t) ? t : String(t);
+      }
+      function _toPrimitive(t, e) {
+        if ("object" !== _typeof(t) || null === t) return t;
+        var o = t[Symbol.toPrimitive];
+        if (void 0 === o) return ("string" === e ? String : Number)(t);
+        o = o.call(t, e || "default");
+        if ("object" !== _typeof(o)) return o;
+        throw new TypeError("@@toPrimitive must return a primitive value.");
+      }
+      (() => {
+        var t,
+          e,
+          o,
+          r = new CustomEvent("spPopupsLoaded");
+        (null == (t = window) || null == (t = t.sp) || null == (t = t.popups)
+          ? void 0
+          : t.projectId) ||
+          ((t = document.querySelector("[77e01264-91de-4fad-bd9a-8e5ce9180a72]")),
+          (e = document.querySelector("[data-chats-widget-popup-id]")),
+          (window.sp = _objectSpread(
+            _objectSpread({}, window.sp),
+            {},
+            {
+              popups: {
+                projectId:
+                  null == t || null == (t = t.dataset)
+                    ? void 0
+                    : t.chatsWidgetId,
+                popupId:
+                  null == e || null == (t = e.dataset)
+                    ? void 0
+                    : t.chatsWidgetPopupId,
+              },
+            }
+          )),
+          (o = (() => {
+            var t = document
+              .querySelector("[77e01264-91de-4fad-bd9a-8e5ce9180a72]")
+              .getAttribute("src")
+              .split("/")[2];
+            return t.includes("localhost")
+              ? "http://".concat(t, "/build/bundle.js")
+              : t.includes(".js")
+              ? "/bundle.js.gz"
+              : "https://".concat(t, "/bundle.js.gz");
+          })()),
+          new Promise(function (t) {
+            var e = document.createElement("script");
+            e.setAttribute("async", ""),
+              (e.src = o),
+              document.getElementsByTagName("body")[0].appendChild(e),
+              (e.onload = function () {
+                return t();
+              });
+          }).then(function () {
+            var t = document.getElementsByTagName("sp-popups").item(0);
+            (t.style.zIndex = "2147483647"),
+              (t.style.position = "fixed"),
+              setTimeout(function () {
+                return document.dispatchEvent(r);
+              });
+          }));
+      })();
+    </script>
   </body>
 </html>
