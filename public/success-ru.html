@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {
+      overflow: hidden;
+    }
+    body {
+      position: relative;
+      color: white;
+      background: #171e26;
+      font-family: sans-serif;
+    }
+    main {
+      padding: 10vw 0 0 5vw;
+    }
+    h1 {
+      font-size: 4vw;
+    }
+    p {
+      margin-top: 2vw;
+      font-size: 2vw;
+    }
+    .people {
+      position: absolute;
+      right: 0;
+      width: 60vw;
+      height: 100vw;
+      transform: translate(10%, -20%);
+      background-image: url(./main-peoples.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Вы успешно зарегистрировались!</h1>
+    <p>Скоро встретимся!</p>
+  </main>
+  <div class="people"></div>
+</body>
+</html>

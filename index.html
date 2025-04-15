@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/for.css" />
+    <link rel="stylesheet" href="style/result.css" />
+    <link rel="stylesheet" href="style/preloader.css" />
+    <link rel="stylesheet" href="style/form.css" />
+  </head>
+  <body>
+    <!-- Форма реєстрації -->
+    <div id="form" class="form-bg">
+      <div class="form-content">
+        <a href="#" class="form-close">
+          <div></div>
+          <div></div>
+        </a>
+        <h3 class="form-title">Регистрация на<br />практикум</h3>
+        <p class="form-text">Заполните форму, чтобы продолжить</p>
+        <form action="http://localhost:3000/send" method="POST" class="form-form">
+          <input type="text" value="./success-ru.html" name="page" style="visibility: hidden;" />
+          <input type="text" placeholder="Ваше имя" name="name" class="form-input-text" />
+          <input type="text" placeholder="Ваша электронная почта" name="email" class="form-input-text" />
+          <input type="tel" placeholder="Ваш номер телефону" name="tel" class="form-input-text" />
+          <div class="form-check-block">
+            <input type="checkbox" checked name="offerta" class="checkmark" />
+            <p class="form-inpt-check-text">Соглашаюсь с условиями <a href="https://docs.google.com/document/d/1RxuO1RrNYAE6SPOPV8EDoBQ1Tvc9_Ah5_d8Ah01_gdo/edit?tab=t.0" target="_blank">политики обработки персональных данных</a> и <a href="https://docs.google.com/document/d/1OIuxYrzzregtJsbs4NG4uAGx0BHnk6c0UKxAIMt010U/edit?tab=t.0" target="_blank">договором-офертой</a></p>
+          </div>
+          <div class="form-check-block">
+            <input type="checkbox" checked name="subscribe" class="checkmark" />
+            <p class="form-inpt-check-text">Соглашаюсь на получение рекламных рассылок</p>
+          </div>
+          <button type="submit" class="form-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="custom-select-wrapper">
+        <div class="custom-select" id="select">
+          <img src="imgs/lang-ru.webp" />
+        </div>
+        <div class="custom-options" id="options">
+          <a href="lang-ukraine.html" class="custom-option"
+            ><img src="imgs/lang-ua.webp"
+          /></a>
+        </div>
+      </div>
+      <script>
+        const select = document.getElementById("select");
+        const options = document.getElementById("options");
+        const optionItems = options.querySelectorAll(".custom-option");
+
+        select.addEventListener("click", () => {
+          options.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!select.contains(e.target) && !options.contains(e.target)) {
+            options.classList.remove("open");
+          }
+        });
+      </script>
+
+      <img class="main-peoples" src="imgs/main-peoples-mobile.webp" />
+      <img class="main-peoples-mobile" src="imgs/main-peoples-mobile.webp" />
+      <div class="main-content">
+        <div class="main-date">
+          <img src="imgs/oclock.webp" class="main-date-img" />
+          <p class="main-date-text">
+            <span class="change-data">...</span> в 20:00 по Киеву
+          </p>
+          <script>
+            (function () {
+              const ruMonths = [
+                "января",
+                "февраля",
+                "марта",
+                "апреля",
+                "мая",
+                "июня",
+                "июля",
+                "августа",
+                "сентября",
+                "октября",
+                "ноября",
+                "декабря",
+              ];
+
+              const now = new Date();
+              // Зміщення до українського часу (UTC+3)
+              const utc3 = new Date(
+                now.getTime() + (3 * 60 - now.getTimezoneOffset()) * 60000
+              );
+
+              // Якщо після 19:00 – додаємо день
+              const targetDate = new Date(utc3);
+              if (utc3.getHours() >= 19) {
+                targetDate.setDate(targetDate.getDate() + 1);
+              }
+
+              const day = targetDate.getDate();
+              const month = ruMonths[targetDate.getMonth()];
+
+              const mainDateText = document.querySelector(".change-data");
+              if (mainDateText) {
+                mainDateText.textContent = `${day} ${month}`;
+              }
+            })();
+          </script>
+        </div>
+        <span class="main-span">Практикум</span>
+        <h1 class="main-title">
+          СОЗДАЙ СВОЙ БИЗНЕС:
+          <span
+            >ПРИБЫЛЬНАЯ СТРАТЕГИЯ ЗАПУСКА ИНТЕРНЕТ-МАГАЗИНА И ВЫХОДА НА $2000 ЗА
+            2 МЕСЯЦА</span
+          >
+        </h1>
+        <ul class="main-list">
+          <h2 class="main-list-title">На практикуме разберем:</h2>
+          <li class="main-list-item">
+            как начать продавать товары без вложений
+          </li>
+          <li class="main-list-item">что продавать в 2025 году</li>
+          <li class="main-list-item">ТОП-3 модели, которые мы используем</li>
+          <li class="main-list-item">как работает автоворонка продаж</li>
+          <li class="main-list-item">золотое правило запуска</li>
+          <li class="main-list-item">как получать заказы на автомате</li>
+        </ul>
+        <div class="main-reg">
+          <a href="#form"
+            ><button class="main-reg-btn" onclick="window.sppopups.open()">ЗАРЕГИСТРИРОВАТЬСЯ</button></a
+          >
+          <div class="main-reg-desc">
+            <b class="main-reg-title"
+              >Регистрируйся на практикум<br />
+              прямо сейчас — бесплатно</b
+            >
+            <p class="main-reg-text">Повышение цен через</p>
+          </div>
+          <div class="timer">
+            <div class="timer-h">
+              <b class="timer-num">00</b>
+              <span class="timer-text">часов</span>
+            </div>
+            <div class="timer-line"></div>
+            <div class="timer-m">
+              <b class="timer-num">00</b>
+              <span class="timer-text">минут</span>
+            </div>
+            <div class="timer-line"></div>
+            <div class="timer-s">
+              <b class="timer-num">00</b>
+              <span class="timer-text">секунд</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-present">
+          <img src="imgs/main-present.webp" class="main-present-img" />
+          <div class="main-present-txt">
+            <p class="main-present-p">
+              Приходите на практикум и получите подарок
+            </p>
+            <div class="main-present-b">
+              — чек-лист «Как запустить бизнес без вложений»
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="for">
+      <h2 class="for-title">КОМУ НУЖНО ИДТИ НА ПРАКТИКУМ</h2>
+      <img src="imgs/boxes.avif" class="for-img-web" />
+      <ul class="for-list-web">
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_1.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, кто устал жить от зарплаты<br />до зарплаты.</b> Каждый
+            месяц в<br />минус, кредиты, долги, и ощущение,<br />что деньги
+            утекают сквозь пальцы.
+          </p>
+        </li>
+
+        <div class="for-list-line"></div>
+
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_2.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, кто потерял работу или сидит<br />дома без дохода.</b> Вы
+            умеете<br />много, но нигде не нужны. Работы нет,<br />а выживать
+            как-то надо — прямо сейчас.
+          </p>
+        </li>
+
+        <div class="for-list-line"></div>
+
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_3.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, у кого есть дети и страх за их<br />будущее.</b> Хочется
+            дать лучшее,<br />но даже на базовое — одежду, еду,<br />кружки — не
+            всегда хватает.
+          </p>
+        </li>
+
+        <div class="for-list-line"></div>
+
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_4.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, кто хочет выбраться из выгорания<br />и рутины.</b> Устали
+            всё делать<br />«по правилам», работать 24/7,<br />а по факту — без
+            свободы и роста.
+          </p>
+        </li>
+
+        <div class="for-list-line"></div>
+
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_5.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, кто пробовал бизнес, но<br />сливал деньги.</b> Ошибки в
+            рекламе,<br />неудачные ниши, зависание на складе<br />— теперь
+            страшно начинать заново
+          </p>
+        </li>
+
+        <div class="for-list-line"></div>
+
+        <li class="for-item-web">
+          <div
+            style="background-image: url(imgs/for_6.webp)"
+            class="for-item-img"
+          ></div>
+          <p class="for-item-web-text">
+            <b>Тем, кто хочет запустить дело, которое<br />работает само.</b>
+            Без беготни с посылками,<br />без менеджеров и офисов — с
+            системой,<br />которая зарабатывает за вас.
+          </p>
+        </li>
+      </ul>
+      <a href="#form"
+        ><button class="for-btn main-reg-btn" onclick="window.sppopups.open()">Занять место</button></a
+      >
+
+      <img src="imgs/light.webp" class="for-light" />
+    </section>
+
+    <section class="reslt">
+      <h1 class="result-title main-title">
+        РЕЗУЛЬТАТЫ СТУДЕНТОВ<br />С ПРАКТИКУМА:
+      </h1>
+
+      <!-- <ul class="res-list">
+      <li class="res-item">
+        <div class="res-item-top">
+          <p class="res-name">Ирина Михайлова</p>
+          <p class="res-time">20:33</p>
+        </div>
+        <p class="res-text">Полный новичок. За месяц — доход $300<br />в день, 50–60 продаж ежедневно. Смогла<br />отправить детей в частную школу​.</p>
+      </li>
+      <li class="res-item">
+        <div class="res-item-top">
+          <p class="res-name">Денис Величко</p>
+          <p class="res-time">20:43</p>
+        </div>
+        <p class="res-text">Работал на складе в Польше,<br />прогорел в бизнесе. После практикума<br />доход 2800$ в месяц на дропшиппинге​.</p>
+      </li>
+      <li class="res-item area-2">
+        <div class="res-item-top">
+          <p class="res-name">Дмитрий Зозуля</p>
+          <p class="res-time">20:37</p>
+        </div>
+        <p class="res-text">Работал по 12 часов на стройке в Лондоне.<br />Сейчас — 1200–1500$ в месяц, до 20<br />продаж в день, работает не более 3 часов​.</p>
+      </li>
+      <li class="res-item area-2">
+        <div class="res-item-top">
+          <p class="res-name">Анатолий Соколов</p>
+          <p class="res-time">20:28</p>
+        </div>
+        <p class="res-text">Был кальянщиком, мечтал о бизнесе.<br />Вышел на 5000$ дохода через<br />дропшиппинг, путешествует по Европе​.</p>
+      </li>
+      <li class="res-item">
+        <div class="res-item-top">
+          <p class="res-name">Максим</p>
+          <p class="res-time"></p>
+        </div>
+        <p class="res-text">Взял в долг на обучение у родственника.<br />Сейчас — $5000 в месяц и выручка<br />более $55 000, собрал команду​.</p>
+      </li>
+      <li class="res-item">
+        <div class="res-item-top">
+          <p class="res-name">Юлия</p>
+          <p class="res-time">20:35</p>
+        </div>
+        <p class="res-text">Работала в отделе продаж,<br />параллельно училась.<br />За 2 месяца — заработала более $4000​.</p>
+      </li>
+    </ul> -->
+      <div class="slider" id="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="imgs/telegram-1-ru.webp" />
+          </div>
+          <div class="slide">
+            <img src="imgs/telegram-2-ru.webp" />
+          </div>
+          <div class="slide">
+            <img src="imgs/telegram-3-ru.webp" />
+          </div>
+          <div class="slide">
+            <img src="imgs/telegram-4-ru.webp" />
+          </div>
+          <div class="slide">
+            <img src="imgs/telegram-5-ru.webp" />
+          </div>
+          <div class="slide">
+            <img src="imgs/telegram-6-ru.webp" />
+          </div>
+        </div>
+        <button class="nav-button prev">&#10094;</button>
+        <button class="nav-button next">&#10095;</button>
+      </div>
+
+      <script>
+        const slider = document.getElementById("slider");
+        const slidesContainer = slider.querySelector(".slides");
+        const slideElements = slider.querySelectorAll(".slide");
+        const prev = slider.querySelector(".prev");
+        const next = slider.querySelector(".next");
+
+        let index = 0;
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        function updateSlidePosition() {
+          slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener("click", () => {
+          index = (index - 1 + slideElements.length) % slideElements.length;
+          updateSlidePosition();
+        });
+
+        next.addEventListener("click", () => {
+          index = (index + 1) % slideElements.length;
+          updateSlidePosition();
+        });
+
+        // Swipe / Drag support
+        slidesContainer.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startX = e.pageX;
+        });
+
+        slidesContainer.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          currentX = e.pageX;
+        });
+
+        slidesContainer.addEventListener("mouseup", () => {
+          isDragging = false;
+          handleSwipe();
+        });
+
+        slidesContainer.addEventListener("touchstart", (e) => {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+        });
+
+        slidesContainer.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          currentX = e.touches[0].clientX;
+        });
+
+        slidesContainer.addEventListener("touchend", () => {
+          isDragging = false;
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          const diff = currentX - startX;
+          if (diff > 50) {
+            index = (index - 1 + slideElements.length) % slideElements.length;
+          } else if (diff < -50) {
+            index = (index + 1) % slideElements.length;
+          }
+          updateSlidePosition();
+        }
+      </script>
+    </section>
+    
+    <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="cc7d62e8-741e-4849-a1f8-56466fc83618"></script>
+  </body>
+</html>
