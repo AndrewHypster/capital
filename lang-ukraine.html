@@ -22,18 +22,57 @@
         </a>
         <h3 class="form-title">Реєстрація на<br />практикум</h3>
         <p class="form-text">Заповніть форму, щоб продовжити</p>
-        <form action="http://localhost:3000/send" method="POST" class="form-form">
-          <input type="text" value="./success-ua.html" name="page" style="visibility: hidden;" />
-          <input type="text" placeholder="Ваше ім'я" name="name" class="form-input-text" />
-          <input type="text" placeholder="Ваша електронна пошта" name="email" class="form-input-text" />
-          <input type="text" placeholder="Ваш номер телефону" name="tel" class="form-input-text" />
+        <form
+          action="http://localhost:3000/send"
+          method="POST"
+          class="form-form"
+        >
+          <input
+            type="text"
+            value="./success-ua.html"
+            name="page"
+            style="visibility: hidden"
+          />
+          <input
+            type="text"
+            placeholder="Ваше ім'я"
+            name="name"
+            class="form-input-text"
+          />
+          <input
+            type="text"
+            placeholder="Ваша електронна пошта"
+            name="email"
+            class="form-input-text"
+          />
+          <input
+            type="text"
+            placeholder="Ваш номер телефону"
+            name="tel"
+            class="form-input-text"
+          />
           <div class="form-check-block">
             <input type="checkbox" checked name="offerta" class="checkmark" />
-            <p class="form-inpt-check-text">Погоджуюсь з умовами <a href="https://docs.google.com/document/d/1RxuO1RrNYAE6SPOPV8EDoBQ1Tvc9_Ah5_d8Ah01_gdo/edit?tab=t.0" target="_blank">політики обробки персональних даних</a> та <a href="https://docs.google.com/document/d/1OIuxYrzzregtJsbs4NG4uAGx0BHnk6c0UKxAIMt010U/edit?tab=t.0" target="_blank">договором-офертою</a></p>
+            <p class="form-inpt-check-text">
+              Погоджуюсь з умовами
+              <a
+                href="https://docs.google.com/document/d/1RxuO1RrNYAE6SPOPV8EDoBQ1Tvc9_Ah5_d8Ah01_gdo/edit?tab=t.0"
+                target="_blank"
+                >політики обробки персональних даних</a
+              >
+              та
+              <a
+                href="https://docs.google.com/document/d/1OIuxYrzzregtJsbs4NG4uAGx0BHnk6c0UKxAIMt010U/edit?tab=t.0"
+                target="_blank"
+                >договором-офертою</a
+              >
+            </p>
           </div>
           <div class="form-check-block">
             <input type="checkbox" checked name="subscribe" class="checkmark" />
-            <p class="form-inpt-check-text">Погоджуюсь на отримання рекламних розсилок</p>
+            <p class="form-inpt-check-text">
+              Погоджуюсь на отримання рекламних розсилок
+            </p>
           </div>
           <button type="submit" class="form-btn">Надіслати</button>
         </form>
@@ -137,7 +176,11 @@
           </li>
         </ul>
         <div class="main-reg">
-          <button class="main-reg-btn sp_popup_1609c9a9-736e-47b8-ae8c-a9459f6565d7">ЗАРЕЄСТРУВАТИСЯ</button>
+          <button
+            class="main-reg-btn sp_popup_1609c9a9-736e-47b8-ae8c-a9459f6565d7"
+          >
+            ЗАРЕЄСТРУВАТИСЯ
+          </button>
           <div class="main-reg-desc">
             <b class="main-reg-title"
               >Реєструйся на практикум <br />просто зараз — безкоштовно</b
@@ -275,7 +318,11 @@
           </p>
         </li>
       </ul>
-      <button class="for-btn main-reg-btn sp_popup_1609c9a9-736e-47b8-ae8c-a9459f6565d7">Занять место</button>
+      <button
+        class="for-btn main-reg-btn sp_popup_1609c9a9-736e-47b8-ae8c-a9459f6565d7"
+      >
+        Занять место
+      </button>
 
       <img src="imgs/light.webp" class="for-light" />
     </section>
@@ -285,7 +332,6 @@
         РЕЗУЛЬТАТЫ СТУДЕНТОВ<br />С ПРАКТИКУМА:
       </h1>
 
-      
       <!-- <ul class="res-list">
       <li class="res-item">
         <div class="res-item-top">
@@ -425,11 +471,20 @@
     </section>
 
     <script src="timer.js"></script>
-      
+    <script type="text/javascript">
+      spPopupsScript = document.createElement("script");
+      spPopupsScript.src = "https://static.sppopups.com/assets/loader.js";
+      spPopupsScript.async = true;
+      spPopupsScript.setAttribute(
+        "data-chats-widget-id",
+        "77e01264-91de-4fad-bd9a-8e5ce9180a72"
+      );
+      document.head.appendChild(spPopupsScript);
+    </script>
     <script
       async
       src="https://static.sppopups.com/assets/loader.js"
-      data-chats-widget-id="7f75380b-1964-4d0d-bea2-d94a2a0a785d"
+      data-chats-widget-id="77e01264-91de-4fad-bd9a-8e5ce9180a72"
     ></script>
   </body>
 </html>
